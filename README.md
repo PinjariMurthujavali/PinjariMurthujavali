@@ -1,3 +1,11 @@
+<!-- Dark Mode Banner -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/PinjariMurthujavali/PinjariMurthujavali/main/dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/PinjariMurthujavali/PinjariMurthujavali/main/light.svg">
+  <img alt="GitHub Profile Banner" src="https://raw.githubusercontent.com/PinjariMurthujavali/PinjariMurthujavali/main/light.svg">
+</picture>
+
+
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2F80ED,100:0089FF&height=180&section=header&text=Murthujavali%20Pinjari&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Senior%20Full%20Stack%20Developer%20%7C%20Frappe%2FERPNext%20Expert&descAlignY=58&descSize=18" />
 </p>
