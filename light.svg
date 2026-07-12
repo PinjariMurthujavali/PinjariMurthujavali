@@ -1,0 +1,264 @@
+<svg viewBox="0 0 1180 610" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Light Mode Gradients -->
+    <linearGradient id="asciiGradientLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#06B6D4;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1">
+        <animate attributeName="stop-color" values="#10B981;#2563EB;#10B981" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <radialGradient id="bgGradientLight">
+      <stop offset="0%" style="stop-color:#DBEAFE;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0"/>
+    </radialGradient>
+
+    <linearGradient id="borderGlowLight">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0.4"/>
+    </linearGradient>
+
+    <!-- Blur Filter -->
+    <filter id="glassBlurLight">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+
+    <!-- Glow Filter -->
+    <filter id="glowLight">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Scanline Pattern Light -->
+    <pattern id="scanlinesLight" patternUnits="userSpaceOnUse" width="1180" height="3">
+      <line x1="0" y1="0" x2="1180" y2="0" stroke="#06B6D4" stroke-width="1" opacity="0.03"/>
+      <line x1="0" y1="2" x2="1180" y2="2" stroke="#2563EB" stroke-width="1" opacity="0.02"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1180" height="610" fill="#FFFFFF"/>
+  
+  <!-- Radial Glow Background Light -->
+  <circle cx="590" cy="305" r="600" fill="url(#bgGradientLight)">
+    <animate attributeName="r" values="600;700;600" dur="8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Scanline overlay -->
+  <rect width="1180" height="610" fill="url(#scanlinesLight)">
+    <animate attributeName="opacity" values="0.05;0.08;0.05" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Glass Border -->
+  <rect x="20" y="20" width="1140" height="570" rx="20" fill="none" stroke="url(#borderGlowLight)" stroke-width="2" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Main container with glass effect -->
+  <rect x="30" y="30" width="1120" height="550" rx="16" fill="#F8FAFC" opacity="0.8" filter="url(#glassBlurLight)"/>
+
+  <!-- LEFT SIDE - ASCII Art Terminal (38%) -->
+  <g id="leftSideLight" transform="translate(50, 60)">
+    <!-- ASCII Container -->
+    <rect x="0" y="0" width="400" height="470" rx="8" fill="#FFFFFF" opacity="0.7" stroke="rgba(15,23,42,0.1)" stroke-width="1"/>
+
+    <!-- ASCII Characters with staggered reveal -->
+    <text x="20" y="40" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="url(#asciiGradientLight)" letter-spacing="2">
+      <tspan>╔════════════════╗</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.2s" fill="freeze"/>
+    </text>
+
+    <text x="20" y="65" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="url(#asciiGradientLight)">
+      <tspan>║ DEVELOPER.py  ║</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.4s" fill="freeze"/>
+    </text>
+
+    <text x="20" y="90" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="url(#asciiGradientLight)">
+      <tspan>╚════════════════╝</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.6s" fill="freeze"/>
+    </text>
+
+    <text x="20" y="130" font-family="'Courier New', monospace" font-size="11" fill="#475569">
+      <tspan>{'name': 'Murthu'</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.8s" fill="freeze"/>
+    </text>
+
+    <text x="20" y="155" font-family="'Courier New', monospace" font-size="11" fill="#475569">
+      <tspan> 'role': 'Full Stack'</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.0s" fill="freeze"/>
+    </text>
+
+    <text x="20" y="180" font-family="'Courier New', monospace" font-size="11" fill="#475569">
+      <tspan> 'skills': [</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.2s" fill="freeze"/>
+    </text>
+
+    <text x="35" y="205" font-family="'Courier New', monospace" font-size="11" fill="#059669">
+      <tspan>'Python', 'Django',</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.4s" fill="freeze"/>
+    </text>
+
+    <text x="35" y="230" font-family="'Courier New', monospace" font-size="11" fill="#059669">
+      <tspan>'Frappe', 'ERPNext',</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.6s" fill="freeze"/>
+    </text>
+
+    <text x="35" y="255" font-family="'Courier New', monospace" font-size="11" fill="#059669">
+      <tspan>'React', 'Node.js'</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.8s" fill="freeze"/>
+    </text>
+
+    <text x="20" y="280" font-family="'Courier New', monospace" font-size="11" fill="#475569">
+      <tspan> ]}</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.0s" fill="freeze"/>
+    </text>
+
+    <!-- Blinking Cursor -->
+    <rect x="38" y="295" width="8" height="16" fill="#2563EB" opacity="0.8">
+      <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite" begin="2.2s"/>
+    </rect>
+
+    <!-- Floating Animation for ASCII -->
+    <g id="asciiFloatLight" transform="translate(0, 0)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-8; 0,0" dur="4s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- RIGHT SIDE - Terminal Content (62%) -->
+  <g id="rightSideLight" transform="translate(520, 60)">
+    <!-- Terminal Window -->
+    <rect x="0" y="0" width="600" height="470" rx="8" fill="#F8FAFC" opacity="0.7" stroke="rgba(15,23,42,0.1)" stroke-width="1"/>
+
+    <!-- Terminal Header -->
+    <rect x="0" y="0" width="600" height="35" rx="8" fill="rgba(37, 99, 235, 0.08)" stroke="rgba(6, 182, 212, 0.2)" stroke-width="1"/>
+    <circle cx="15" cy="17.5" r="4" fill="#EC4899" opacity="0.7"/>
+    <circle cx="35" cy="17.5" r="4" fill="#F59E0B" opacity="0.7"/>
+    <circle cx="55" cy="17.5" r="4" fill="#10B981" opacity="0.7"/>
+    <text x="280" y="22" font-family="'Courier New', monospace" font-size="12" fill="#475569" text-anchor="middle">Terminal</text>
+
+    <!-- Greeting -->
+    <text x="30" y="70" font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#2563EB">
+      <tspan>Hi 👋</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.5s" fill="freeze"/>
+    </text>
+
+    <text x="30" y="105" font-family="'Courier New', monospace" font-size="24" font-weight="bold" fill="#0F172A">
+      <tspan>I'm Murthujavali</tspan>
+      <animate attributeName="opacity" values="0;1" dur="0.6s" begin="1.0s" fill="freeze"/>
+    </text>
+
+    <!-- Rotating Role Text -->
+    <text x="30" y="140" font-family="'Courier New', monospace" font-size="13" fill="#2563EB">
+      <tspan id="roleTextLight">Frappe/ERPNext Expert</tspan>
+      <animate attributeName="opacity" values="1;0" dur="3s" begin="2s;5s;8s" fill="freeze"/>
+    </text>
+
+    <!-- Info Items Sequential Reveal -->
+    <g id="infoItemsLight">
+      <text x="30" y="180" font-family="'Courier New', monospace" font-size="12" fill="#475569">
+        <tspan>📍 Hyderabad, India</tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="2.5s" fill="freeze"/>
+      </text>
+
+      <text x="30" y="210" font-family="'Courier New', monospace" font-size="12" fill="#475569">
+        <tspan>🔧 Senior Full Stack Developer</tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="2.9s" fill="freeze"/>
+      </text>
+
+      <text x="30" y="240" font-family="'Courier New', monospace" font-size="12" fill="#475569">
+        <tspan>🏥 Hospital Management ERP</tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="3.3s" fill="freeze"/>
+      </text>
+
+      <text x="30" y="270" font-family="'Courier New', monospace" font-size="12" fill="#475569">
+        <tspan>💼 Brilliant Technologies</tspan>
+        <animate attributeName="opacity" values="0;1" dur="0.4s" begin="3.7s" fill="freeze"/>
+      </text>
+    </g>
+
+    <!-- Skills Pills -->
+    <g id="skillsPillsLight">
+      <animate attributeName="opacity" values="0;1" dur="0.6s" begin="4.2s" fill="freeze"/>
+
+      <!-- Skill 1 -->
+      <rect x="30" y="310" width="70" height="26" rx="13" fill="#2563EB" opacity="0.15" stroke="#2563EB" stroke-width="1">
+        <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2.5s" repeatCount="indefinite" begin="4.5s"/>
+      </rect>
+      <text x="65" y="328" font-family="'Courier New', monospace" font-size="11" fill="#2563EB" text-anchor="middle" font-weight="bold">Python</text>
+
+      <!-- Skill 2 -->
+      <rect x="115" y="310" width="70" height="26" rx="13" fill="#06B6D4" opacity="0.15" stroke="#06B6D4" stroke-width="1">
+        <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2.5s" repeatCount="indefinite" begin="4.8s"/>
+      </rect>
+      <text x="150" y="328" font-family="'Courier New', monospace" font-size="11" fill="#06B6D4" text-anchor="middle" font-weight="bold">Django</text>
+
+      <!-- Skill 3 -->
+      <rect x="200" y="310" width="70" height="26" rx="13" fill="#10B981" opacity="0.15" stroke="#10B981" stroke-width="1">
+        <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2.5s" repeatCount="indefinite" begin="5.1s"/>
+      </rect>
+      <text x="235" y="328" font-family="'Courier New', monospace" font-size="11" fill="#10B981" text-anchor="middle" font-weight="bold">Frappe</text>
+
+      <!-- Skill 4 -->
+      <rect x="285" y="310" width="70" height="26" rx="13" fill="#EC4899" opacity="0.15" stroke="#EC4899" stroke-width="1">
+        <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2.5s" repeatCount="indefinite" begin="5.4s"/>
+      </rect>
+      <text x="320" y="328" font-family="'Courier New', monospace" font-size="11" fill="#EC4899" text-anchor="middle" font-weight="bold">ERPNext</text>
+
+      <!-- Skill 5 -->
+      <rect x="30" y="350" width="70" height="26" rx="13" fill="#F59E0B" opacity="0.15" stroke="#F59E0B" stroke-width="1">
+        <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2.5s" repeatCount="indefinite" begin="5.7s"/>
+      </rect>
+      <text x="65" y="368" font-family="'Courier New', monospace" font-size="11" fill="#F59E0B" text-anchor="middle" font-weight="bold">React</text>
+
+      <!-- Skill 6 -->
+      <rect x="115" y="350" width="70" height="26" rx="13" fill="#059669" opacity="0.15" stroke="#059669" stroke-width="1">
+        <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2.5s" repeatCount="indefinite" begin="6.0s"/>
+      </rect>
+      <text x="150" y="368" font-family="'Courier New', monospace" font-size="11" fill="#059669" text-anchor="middle" font-weight="bold">Docker</text>
+    </g>
+
+    <!-- Social Icons -->
+    <g id="socialIconsLight">
+      <animate attributeName="opacity" values="0;1" dur="0.6s" begin="4.8s" fill="freeze"/>
+
+      <!-- GitHub Icon -->
+      <circle cx="60" cy="430" r="18" fill="none" stroke="#475569" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite" begin="5.0s"/>
+      </circle>
+      <text x="60" y="436" font-size="16" text-anchor="middle" fill="#475569">🐙</text>
+
+      <!-- LinkedIn Icon -->
+      <circle cx="120" cy="430" r="18" fill="none" stroke="#0A66C2" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite" begin="5.3s"/>
+      </circle>
+      <text x="120" y="436" font-size="16" text-anchor="middle" fill="#0A66C2">in</text>
+
+      <!-- YouTube Icon -->
+      <circle cx="180" cy="430" r="18" fill="none" stroke="#FF0000" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite" begin="5.6s"/>
+      </circle>
+      <text x="180" y="436" font-size="16" text-anchor="middle" fill="#FF0000">▶</text>
+
+      <!-- Portfolio Icon -->
+      <circle cx="240" cy="430" r="18" fill="none" stroke="#2563EB" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite" begin="5.9s"/>
+      </circle>
+      <text x="240" y="436" font-size="16" text-anchor="middle" fill="#2563EB">🌐</text>
+
+      <!-- Email Icon -->
+      <circle cx="300" cy="430" r="18" fill="none" stroke="#F59E0B" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite" begin="6.2s"/>
+      </circle>
+      <text x="300" y="436" font-size="16" text-anchor="middle" fill="#F59E0B">✉</text>
+    </g>
+
+    <!-- Bottom text -->
+    <text x="30" y="475" font-family="'Courier New', monospace" font-size="10" fill="#94A3B8" opacity="0.8">
+      <tspan>$ Open to collaborations &amp; remote roles</tspan>
+    </text>
+  </g>
+</svg>
